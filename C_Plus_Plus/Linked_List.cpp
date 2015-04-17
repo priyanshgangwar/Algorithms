@@ -1,3 +1,12 @@
+/*
+-------------------------------------
+author: Priyansh Gangwar
+e-mail: priyanshgangwar@gmail.com
+-------------------------------------
+This code is to demonstrate Linked Lists in C++
+This code shows Linked List of First Name, Last Name and age of persons.
+*/
+
 #include <iostream>
 
 using namespace std;
@@ -9,9 +18,9 @@ struct persons
     persons *next = NULL;
 };
 
-persons *first = NULL;
+persons *first = NULL;          //First element is set to NULL in the begining
 
-void view()
+void view()                     //To Traverse the list
 {
     persons *dummy;
     dummy = first;
@@ -25,7 +34,7 @@ void view()
     cout<<"\n";
 }
 
-void add()
+void add()                      //To create a new Node
 {
     persons *start = new persons;
     if(first == NULL)
@@ -47,7 +56,7 @@ void add()
     cout<<"\n";
 }
 
-void del_person()
+void del_person()               //To delete a Node
 {
     int n;
     view();
@@ -68,7 +77,7 @@ void del_person()
     }
 }
 
-void name_edit()
+void name_edit()               //To edit Name in a Node
 {
     int n;
     persons *dummy = first;
@@ -93,7 +102,7 @@ void name_edit()
     }
 }
 
-void age_edit()
+void age_edit()                  //To edit age in a Node
 {
     int n;
     persons *dummy = first;
